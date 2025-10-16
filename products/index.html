@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vokkal Seeds | Vegetable Hybrids</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER (same style as home) -->
+  <div class="site-header">
+    <div class="header-wrapper">
+      <!-- Contact bar -->
+      <div class="contact-bar">
+        <div class="contact-left">
+          <span class="ci"><i class="fa-solid fa-location-dot"></i> Bangalore, KA</span>
+          <span class="ci"><i class="fa-solid fa-envelope"></i> support@vokkalseeds.com</span>
+          <span class="ci"><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+        </div>
+        <div class="contact-right">
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Nav bar -->
+      <div class="nav-bar">
+        <div class="nav-inner">
+          <div class="brand">
+            <img src="assets/images/vokkal-logo.jpg" alt="Vokkal Seeds">
+          </div>
+
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+
+              <li class="has-dropdown">
+                <a href="#">What We Do ▾</a>
+                <ul class="dropdown">
+                  <li><a href="#">R &amp; D Activities</a></li>
+                  <li><a href="#">Seed Production</a></li>
+                  <li><a href="#">Seed Processing &amp; Quality</a></li>
+                  <li><a href="#">Sales &amp; Marketing</a></li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <a href="#">Products ▾</a>
+                <ul class="dropdown">
+                  <li><a href="#">Vegetable Crops</a></li>
+                  <li><a href="#">Flower Crops</a></li>
+                </ul>
+              </li>
+
+              <li class="has-dropdown">
+                <a href="#">Our Community ▾</a>
+                <ul class="dropdown">
+                  <li><a href="#">CSR</a></li>
+                  <li><a href="#">Testimonials &amp; Reviews</a></li>
+                  <li><a href="#">Events</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="nav-cta">
+            <a class="shop-btn" href="#">SHOP</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PAGE TITLE -->
+  <header class="products-header">
+    <h1>Vegetable Crops</h1>
+  </header>
+
+  <!-- 🌾 Crop Slider Section -->
+<section class="crop-slider-wrapper">
+  <button class="scroll-btn left" id="scrollLeft"><i class="fa-solid fa-chevron-left"></i></button>
+
+  <div class="crop-slider" id="cropSlider">
+    <div class="crop-item active" data-crop="Chilli">
+      <img src="icons/Chilli.jpg" alt="Chilli">
+      <p>Chilli</p>
+    </div>
+
+    <div class="crop-item" data-crop="Tomato">
+      <img src="icons/Tomato.jpg" alt="Tomato">
+      <p>Tomato</p>
+    </div>
+
+    <div class="crop-item" data-crop="Watermelon">
+      <img src="icons/Watermelon.jpg" alt="Watermelon">
+      <p>Watermelon</p>
+    </div>
+
+    <div class="crop-item" data-crop="Okra">
+      <img src="icons/Okra.jpg" alt="Okra">
+      <p>Okra</p>
+    </div>
+
+    <div class="crop-item" data-crop="Capsicum">
+      <img src="icons/Capsicum.jpg" alt="Capsicum">
+      <p>Capsicum</p>
+    </div>
+
+    <div class="crop-item" data-crop="Dolichos">
+      <img src="icons/Dolichos.jpg" alt="Dolichos">
+      <p>Dolichos</p>
+    </div>
+
+    <div class="crop-item" data-crop="French Beans">
+      <img src="icons/French beans.jpg" alt="French Beans">
+      <p>French Beans</p>
+    </div>
+
+    <div class="crop-item" data-crop="Brinjal">
+      <img src="icons/Brinjal.jpg" alt="Brinjal">
+      <p>Brinjal</p>
+    </div>
+
+    <div class="crop-item" data-crop="Cucumber">
+      <img src="icons/Cucumber.jpg" alt="Cucumber">
+      <p>Cucumber</p>
+    </div>
+  </div>
+
+  <button class="scroll-btn right" id="scrollRight"><i class="fa-solid fa-chevron-right"></i></button>
+</section>
+
+  <!-- HYBRID SECTIONS -->
+  <main>
+    <!-- CHILLI -->
+    <section id="chilli" class="hybrid-section active">
+      <h2>Chilli Hybrids</h2>
+      <div class="hybrid-grid">
+
+        <div class="card" onclick="openModal('Chilli', 'Bullet Chilli Trishul')">
+          <img src="images/chilli/Bullet Chilli Trishul/cover.jpg" alt="Bullet Chilli Trishul">
+          <h3>Bullet Chilli Trishul</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Chilli hpt-1047-Green Fruits')">
+          <img src="images/chilli/Chilli hpt-1047-Green Fruits/cover.jpg" alt="Chilli hpt-1047-Green Fruits">
+          <h3>Chilli hpt-1047-Green Fruits</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Chilli Trisha')">
+          <img src="images/chilli/Chilli Trisha/cover.jpg" alt="Chilli Trisha">
+          <h3>Chilli Trisha</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Chilli vs 1053-p')">
+          <img src="images/chilli/Chilli vs 1053-p/cover.jpg" alt="Chilli vs 1053-p">
+          <h3>Chilli vs 1053-p</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Chilli vs 9955')">
+          <img src="images/chilli/Chilli vs 9955/cover.jpg" alt="Chilli vs 9955">
+          <h3>Chilli vs 9955</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Chilli-hpt-1014-Dark Green Fruits')">
+          <img src="images/chilli/Chilli-hpt-1014-Dark Green Fruits/cover.jpg" alt="Chilli-hpt-1014-Dark Green Fruits">
+          <h3>Chilli-hpt-1014-Dark Green Fruits</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Chilli-hpt-1056-Green Fruits')">
+          <img src="images/chilli/Chilli-hpt-1056-Green Fruits/cover.jpg" alt="Chilli-hpt-1056-Green Fruits">
+          <h3>Chilli-hpt-1056-Green Fruits</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Chilli-vs 9966')">
+          <img src="images/chilli/Chilli-vs 9966/cover.jpg" alt="Chilli-vs 9966">
+          <h3>Chilli-vs 9966</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Tarak')">
+          <img src="images/chilli/Tarak/cover.jpg" alt="Tarak">
+          <h3>Tarak</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Tarini')">
+          <img src="images/chilli/Tarini/cover.jpg" alt="Tarini">
+          <h3>Tarini</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Tiger')">
+          <img src="images/chilli/Tiger/cover.jpg" alt="Tiger">
+          <h3>Tiger</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Toofan')">
+          <img src="images/chilli/Toofan/cover.jpg" alt="Toofan">
+          <h3>Toofan</h3>
+        </div>
+
+        <div class="card" onclick="openModal('Chilli', 'Tulasi')">
+          <img src="images/chilli/Tulasi/cover.jpg" alt="Tulasi">
+          <h3>Tulasi</h3>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL (rectangle, centered image, arrows on sides, dots under, two columns) -->
+  <div id="modal" class="modal">
+    <div class="modal-dialog" role="dialog" aria-modal="true">
+      <!-- Orange Header -->
+      <div class="modal-header">
+        <h2 id="modal-title">Hybrid Name</h2>
+        <button class="close" aria-label="Close" onclick="closeModal()">&times;</button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+
+        <!-- Image area (no top/bottom space around image; arrows inside; dots under) -->
+        <div class="modal-image-area">
+          <div class="slideshow-container" id="slideshow">
+            <button class="arrow-btn arrow-left" onclick="prevSlide()">&#10094;</button>
+            <button class="arrow-btn arrow-right" onclick="nextSlide()">&#10095;</button>
+          </div>
+          <div id="dots" class="dots-container"></div>
+        </div>
+
+        <!-- Two-column content -->
+        <div class="modal-content-grid">
+          <div class="desc-col">
+            <h3>Description</h3>
+            <div id="modal-desc" class="description"></div>
+
+            <a id="youtube-link" href="#" target="_blank" class="yt-link">
+              <i class="fab fa-youtube"></i> For more information
+            </a>
+          </div>
+
+          <div class="region-col">
+            <h3>Recommended Geography</h3>
+            <div id="modal-regions" class="regions"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Left Section -->
+      <div class="footer-section left">
+        <img src="assets/images/vokkal-logo.jpg" alt="Vokkal Seeds" class="footer-logo">
+        <p>Vokkal Seeds Is 'Quality' to meet the challenging needs of a changing society.</p>
+
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+
+        <a href="#" class="mgt-btn">Vokkal Seeds MGT 7A Form</a>
+      </div>
+
+      <!-- Center Section -->
+      <div class="footer-section center">
+        <h4>Quick Links</h4>
+        <ul>
+          <li>➤ Home</li>
+          <li>➤ About Us</li>
+          <li>➤ What We Do</li>
+          <li>➤ Products</li>
+          <li>➤ Our Community</li>
+          <li>➤ Contact</li>
+        </ul>
+      </div>
+
+      <!-- Right Section -->
+      <div class="footer-section right">
+        <h4>Contact Us</h4>
+        <p>Email: info@vokkalseeds.com</p>
+        <p>Phone 1: +91 9876543210</p>
+        <p>Phone 2: +91 9123456780</p>
+        <p>Address: 123 Green Field Road, Bangalore, India</p>
+      </div>
+
+    </div>
+
+    <!-- Orange Bar -->
+    <div class="footer-bottom">
+      <p>Copyright 2022 Vokkal Seeds. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
