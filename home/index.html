@@ -7,469 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+  <link rel="stylesheet" href="style.css">
 
-
-  <style>
-/* header------------------------------------------------------------------------------------------ */
-:root{--brand:#F07235;--white:#fff;--beige:#F9EFE3}
-*{box-sizing:border-box}
-body{font-family:'Poppins',system-ui,Arial;margin:0;color:#222}
-
-/* Sticky full header */
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:1200;
-  background:var(--brand);
-}
-
-/* Wrapper for both contact + nav */
-.header-wrapper{
-  background:var(--brand);
-  padding:6px 0;
-}
-
-/* CONTACT BAR */
-.contact-bar{
-  background:none;
-  color:var(--white);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:4px 28px;
-  gap:16px;
-  font-size:14px;
-}
-.contact-left{display:flex;gap:18px;align-items:center}
-.contact-left .ci{display:inline-flex;gap:8px;align-items:center}
-.contact-right a{color:var(--white);margin-left:12px;text-decoration:none;font-size:18px}
-.contact-right a:hover{opacity:0.9;transform:translateY(-1px);transition:.18s}
-
-/* NAV BAR */
-.nav-bar{
-  background:none;
-  padding:10px 24px;
-}
-
-/* Nav layout */
-.nav-inner{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  max-width:1200px;
-  margin:0 auto;
-}
-.brand img{height:56px;display:block}
-
-/* main nav */
-.main-nav{flex:1}
-.main-nav ul{display:flex;gap:28px;align-items:center;list-style:none;margin:0;padding:0;justify-content:center}
-.main-nav a{color:var(--white);text-decoration:none;font-weight:600;padding:6px 4px;transition:.15s}
-.main-nav a:hover{opacity:.9}
-
-/* dropdowns */
-.has-dropdown{position:relative}
-.has-dropdown .dropdown{display:none;position:absolute;top:38px;left:0;background:var(--beige);min-width:200px;border-radius:6px;box-shadow:0 8px 20px rgba(0,0,0,0.12);padding:6px 0}
-.has-dropdown .dropdown li{list-style:none}
-.has-dropdown .dropdown a{display:block;padding:10px 14px;color:#333;font-weight:500;text-decoration:none}
-.has-dropdown .dropdown a:hover{background:#f2e6d6}
-.has-dropdown:hover .dropdown{display:block;animation:fadeIn .22s ease}
-
-/* SHOP CTA */
-.nav-cta{margin-left:16px}
-.shop-btn{
-  background:var(--white);
-  color:var(--brand);
-  font-weight:700;
-  padding:10px 18px;
-  border-radius:24px;
-  border:2px solid var(--white);
-  text-decoration:none;
-  display:inline-block;
-}
-.shop-btn:hover{background:transparent;color:var(--white);border-color:rgba(255,255,255,0.6)}
-
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-
-    
-    
-    /* ✅ Hero Section -------------------------------------------------------------*/
-
-.trust-section {
-  width: 75%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px 0;
-  gap: 40px;
-  position: relative;
-}
-
-.trust-content {
-  width: 50%;
-  animation: slideLeft 1s ease-out;
-}
-
-.trust-content h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #222;
-  line-height: 1.3;
-}
-
-.trust-content p {
-  font-size: 16px;
-  color: #555;
-  margin-top: 15px;
-  line-height: 1.6;
-}
-
-.trust-badge {
-  width: 50%;
-  text-align: center;
-  animation: slideRight 1s ease-out;
-}
-
-.circle-badge {
-  width: 220px;
-  height: 220px;
-  border: 4px solid #FF7A00;
-  border-radius: 50%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.big-number {
-  font-size: 48px;
-  color: #FF7A00;
-  font-weight: 700;
-}
-
-.badge-text {
-  font-size: 18px;
-  color: #222;
-  margin-top: -5px;
-  line-height: 1.2;
-}
-
-.subtext {
-  margin-top: 15px;
-  font-size: 15px;
-  color: #444;
-  font-weight: 500;
-}
-
-/* Animations */
-@keyframes slideLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(80px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
-    /* ✅ Floating Chat Button------------------------------------------------------------------ */
-    .chat-btn {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: var(--brand);
-      color: white;
-      padding: 14px 20px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: 0.3s;
-      z-index: 999;
-    }
-    .chat-btn:hover { transform: scale(1.05); }
-
-    /* ✅ Full Width Factory Video Strip -----------------------------------------------------*/
-.factory-video-section {
-  width: 100%;
-  margin-top: 20px;
-  position: relative;
-  overflow: hidden;
-}
-.factory-video-section img,
-.factory-video-section video {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  display: block;
-}
-.factory-video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* commitment --------- Section Title ------------------------------------------------*/
-.commitment-wrapper {
-  text-align: center;
-  padding: 60px 20px;
-}
-.commitment-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--brand);
-  position: relative;
-  display: inline-block;
-  margin-bottom: 40px;
-}
-.commitment-title::after {
-  content: "";
-  width: 80px;
-  height: 3px;
-  background: var(--brand);
-  display: block;
-  margin: 8px auto 0;
-}
-
-/* ✅ Side Image + Text Layout */
-.commitment-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1100px;
-  margin: auto;
-  flex-wrap: wrap;
-}
-.commitment-image img {
-  width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-.commitment-text {
-  max-width: 500px;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  text-align: left;
-}
-
-/*  vision, mission, values--Parallax Section ---------------------------------------------*/
-.parallax-section {
-  background: url('assets/images/seed-growing.jpg') center/cover fixed;
-  padding: 120px 0;
-  position: relative;
-}
-
-/* ✅ Glass Cards */
-.glass-cards {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.glass-card {
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.15);
-  padding: 30px;
-  border-radius: 16px;
-  width: 280px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  color: white;
-  text-align: center;
-  transition: 0.3s;
-}
-.glass-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-}
-.glass-card h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.glass-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* ✅ Mobile Responsive */
-@media (max-width: 900px) {
-  .glass-card { width: 90%; }
-  .commitment-content { text-align: center; }
-  .commitment-text { text-align: center; }
-}
-
-/* footer/contact ------------------------------------------------------------------------------------------- */
-/* ====== Footer Styling ====== */
-body {
-  margin: 0;
-  background-color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-}
-
-.footer {
-  background-color: #0f4d25;
-  color: white;
-  padding: 50px 0 0 0;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 60px;
-  padding: 0 40px;
-}
-
-/* Each Column */
-.footer-section {
-  flex: 1;
-}
-
-.footer-logo {
-  width: 140px;
-  margin-bottom: 15px;
-}
-
-.footer-section p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-  gap: 18px;
-  margin-bottom: 25px;
-}
-
-.social-icons i {
-  font-size: 18px;
-  cursor: pointer;
-  color: white;
-  transition: 0.3s;
-}
-
-.social-icons i:hover {
-  text-shadow: 0 0 8px #ffffff;
-  transform: scale(1.1);
-}
-
-/* MGT Button */
-.mgt-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #1a702f;
-  color: white;
-  border-radius: 8px;
-  transition: 0.3s;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.mgt-btn:hover {
-  background: #228b43;
-  box-shadow: 0 0 10px #228b43;
-}
-
-/* Quick Links */
-.footer-section.center h4 {
-  margin-bottom: 20px;
-}
-
-.footer-section.center ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  line-height: 2;
-}
-
-.footer-section.center li {
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.footer-section.center li:hover {
-  color: #f57c00;
-}
-
-/* Right Section */
-.footer-section.right h4 {
-  margin-bottom: 20px;
-}
-
-.footer-section.right p {
-  margin: 8px 0;
-}
-
-/* Orange Copyright Bar */
-.footer-bottom {
-  background-color: #f55403;
-  text-align: center;
-  padding: 12px 0;
-  margin-top: 40px;
-  width: 100%;
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: white;
-  font-weight: 500;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-  .footer-section.center ul {
-    display: inline-block;
-    text-align: left;
-  }
-  .social-icons {
-    justify-content: center;
-  }
-}
-
-
-
-
-
-  </style>
 </head>
 
 <body>
@@ -567,7 +107,7 @@ body {
 
   <div class="trust-badge">
     <div class="circle-badge">
-      <span class="big-number">10+</span>
+      <span class="big-number">15+</span>
       <span class="badge-text">Years</span>
     </div>
     <p class="subtext">Growing Strong Since 2013</p>
@@ -620,14 +160,130 @@ body {
   </div>
 </section>
 
-<!-- 🌍 India Map Section ------------------------------------------------------------>
-<section id="india-map-section">
-  <h2 style="text-align: center;"> Explore Our Reach Across India </h2>
-  <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
-  <img src="assets/images/india-map.png" alt="India Map" style="width: 50%; max-width: 600px; height: auto;">
-</div>
 
+<!-- 🌍 ================== REACH MAP SECTION ================== -->
+<section id="reach-map-section">
+  <h2 class="reach-title">Explore Our Reach Across World</h2>
+
+  <!-- 🌍 Map Type Toggle (International / National) -->
+  <div class="reach-toggle-bar">
+    <button class="map-type-btn active" data-map="world">International</button>
+    <button class="map-type-btn" data-map="india">National</button>
+  </div>
+
+  <!-- 🌎 Wrapper (Sidebar + Map) -->
+  <div class="reach-map-wrapper">
+
+    <!-- 🧭 Left Sidebar Filters + Hover Name -->
+    <aside class="reach-sidebar">
+      <!-- <div class="map-info-left">
+        <h4>Region</h4>
+        <div id="hoverName" class="map-region-name">—</div>
+      </div> -->
+
+      <button class="reach-filter-btn active" data-filter="b2b">B2B</button>
+      <button class="reach-filter-btn" data-filter="sales">Sales & Marketing</button>
+    </aside>
+
+    <!-- 🗺️ Map Area -->
+    <div class="reach-map-container" id="mapContainer">
+      <div id="mapArea">
+        <!-- SVG map (India or World) loads dynamically -->
+      </div>
+    </div>
+  </div>
 </section>
+
+
+  <!-- 🏆 ================== AWARDS & RECOGNITIONS SECTION ================== -->
+<section id="awards-recognition-section">
+  <div class="awards-container">
+    <h2 class="section-title">Awards & Recognitions</h2>
+
+    <!-- 🥇 Awards Carousel -->
+    <div class="awards-block">
+      <h3 class="sub-title">🏅 Our Awards</h3>
+
+      <!-- Navigation Arrows -->
+      <button class="carousel-btn left" id="awardPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="carousel-btn right" id="awardNext"><i class="fa-solid fa-chevron-right"></i></button>
+
+      <div class="awards-carousel">
+        <div class="awards-track">
+
+          <div class="award-card" data-aos="fade-up">
+            <img src="assets/images/award1.jpg" alt="Best Seed Innovation Award">
+            <div class="award-content">
+              <h4>Best Seed Innovation Award</h4>
+              <p>Recognized for developing superior hybrid seed varieties that enhance yield and sustainability.</p>
+            </div>
+          </div>
+
+          <div class="award-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/award2.jpg" alt="Agricultural Excellence Award">
+            <div class="award-content">
+              <h4>Agricultural Excellence Award</h4>
+              <p>Honored for technological innovation and contributions to India’s agricultural progress.</p>
+            </div>
+          </div>
+
+          <div class="award-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/images/award3.jpg" alt="Sustainability Leadership Award">
+            <div class="award-content">
+              <h4>Sustainability Leadership Award</h4>
+              <p>Awarded for promoting eco-friendly farming practices and soil health preservation.</p>
+            </div>
+          </div>
+
+          <div class="award-card" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/images/award4.jpg" alt="Innovation in AgriTech Award">
+            <div class="award-content">
+              <h4>Innovation in AgriTech Award</h4>
+              <p>Recognized for leveraging advanced AgriTech to empower modern farmers across India.</p>
+            </div>
+          </div>
+
+          <div class="award-card" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/images/award5.jpg" alt="Excellence in Seed R&D">
+            <div class="award-content">
+              <h4>Excellence in Seed R&D</h4>
+              <p>Awarded for our commitment to continuous research and genetic advancement in seed quality.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 🌟 Recognitions Section ---------------------------------------------------------->
+    <div class="recognition-block">
+      <h3 class="sub-title">🌿 Our Recognitions</h3>
+      <div class="recognition-grid">
+
+        <div class="recognition-card" data-aos="fade-up">
+          <img src="assets/images/company1.png" alt="DSIR Logo">
+          <h4>DSIR</h4>
+          <p>Recognized by Department of Scientific & Industrial Research (Govt. of India).</p>
+        </div>
+
+        <div class="recognition-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/company2.png" alt="ISTA Logo">
+          <h4>ISTA</h4>
+          <p>Accredited by International Seed Testing Association for seed quality assurance.</p>
+        </div>
+
+        <div class="recognition-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/company3.png" alt="ISO Logo">
+          <h4>ISO 9001:2015</h4>
+          <p>Certified for quality management standards in seed production and processing.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- footer/contact ------------------------------------------------------------------------>
   <!-- Footer -->
@@ -680,45 +336,15 @@ body {
     </div>
   </footer>
 
-<!-- -------------------------------------------------------------------------------- -->
-
-<script>
-  // ✅ Animated Counter on Scroll
-  const counters = document.querySelectorAll('.stat-number');
-  let animated = false;
-
-  function animateCounters() {
-    if (animated) return;
-    const sectionPos = document.getElementById('stats').getBoundingClientRect().top;
-    const screenPos = window.innerHeight;
-
-    if (sectionPos < screenPos) {
-      counters.forEach(counter => {
-        let target = +counter.getAttribute('data-count');
-        let count = 0;
-        let speed = target / 60;
-
-        let update = setInterval(() => {
-          count += speed;
-          if (count >= target) {
-            counter.innerText = target.toLocaleString();
-            clearInterval(update);
-          } else {
-            counter.innerText = Math.floor(count).toLocaleString();
-          }
-        }, 20);
-      });
-      animated = true;
-    }
-  }
-
-  window.addEventListener('scroll', animateCounters);
-</script>
 
 
-<!-- ✅ Closing Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script> AOS.init(); </script>
+
+
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
+
+
